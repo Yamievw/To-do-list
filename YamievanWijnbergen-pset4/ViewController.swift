@@ -9,11 +9,12 @@
 import UIKit
 import SQLite
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
     
     @IBOutlet weak var inputItemField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var checkBoxx: UIButton!
     
     var todoitems = [String]()
     
@@ -26,25 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDatabase()
+        addToList()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // Insert todos into "todolist".
-    @IBAction func addItemButton(_ sender: Any) {
-        let insert = todolist.insert(todos <- inputItemField.text!)
-        
-        do {
-            try database!.run(insert)
-        } catch {
-            // Error handling.
-            print("Cannot add item to list: \(error)")
-        }
-        self.tableView.reloadData()
-        inputItemField.text = ""
     }
     
     // Set up database.
@@ -71,6 +59,47 @@ class ViewController: UIViewController {
         }
     }
     
+    // add todos to todolist array and search for todos
+    func addToList() {
+        do {
+            for todo in try database!.prepare(todolist) {
+                if todo[todos].isEmpty != true {
+                    todoitems.append(todo[todos])
+                }
+            }
+        } catch {
+            print("Unable to append item: \(error)")
+        }
+        
+    }
+    
+    // Insert new todo into todolist-database.
+    @IBAction func addItemButton(_ sender: Any) {
+        let insert = todolist.insert(todos <- inputItemField.text!)
+        
+        do {
+            try database!.run(insert)
+            addToList()
+        } catch {
+            // Error handling.
+            print("Cannot add item to list: \(error)")
+        }
+        tableView.reloadData()
+        inputItemField.text = ""
+    }
+    
+    
+    //    // Function to check off todos: when hidden not done, else done
+    //    @IBAction func checkBox(_ sender: Any) {
+    //        if checkBoxx.isHidden == false {
+    //            checkBoxx.isHidden = true
+    //        }
+    //        else if checkBoxx.isHidden == true {
+    //            checkBoxx.isHidden = false
+    //        }
+    //    }
+    //
+    
     // set number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoitems.count
@@ -86,4 +115,8 @@ class ViewController: UIViewController {
         return cell
     }
 }
+
+
+
+
 

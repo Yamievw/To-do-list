@@ -33,14 +33,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-JJ-YTO">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-MM-JRW">
+                                                    <rect key="frame" x="11" y="15" width="14" height="13"/>
+                                                    <color key="backgroundColor" red="0.70331481640000004" green="0.53272931489999997" blue="0.71792185770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="checkBox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noR-Mg-hhb"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-JJ-YTO">
+                                                    <rect key="frame" x="33" y="6" width="334" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="334" id="ava-pN-7SL"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uWT-JJ-YTO" firstAttribute="trailing" secondItem="lFH-Hx-2tM" secondAttribute="trailingMargin" id="0SN-BD-roU"/>
+                                                <constraint firstItem="uWT-JJ-YTO" firstAttribute="centerY" secondItem="lFH-Hx-2tM" secondAttribute="centerY" id="7iD-WZ-nQs"/>
+                                                <constraint firstItem="Syy-MM-JRW" firstAttribute="top" secondItem="lFH-Hx-2tM" secondAttribute="topMargin" constant="7" id="Eqt-gY-PqN"/>
+                                                <constraint firstItem="Syy-MM-JRW" firstAttribute="leading" secondItem="lFH-Hx-2tM" secondAttribute="leadingMargin" constant="3" id="HhZ-db-hHZ"/>
+                                                <constraint firstItem="uWT-JJ-YTO" firstAttribute="top" secondItem="lFH-Hx-2tM" secondAttribute="topMargin" constant="-2" id="OAa-i5-Ic6"/>
+                                                <constraint firstItem="uWT-JJ-YTO" firstAttribute="leading" secondItem="Syy-MM-JRW" secondAttribute="trailing" constant="8" symbolic="YES" id="iPt-Cn-45f"/>
+                                                <constraint firstItem="Syy-MM-JRW" firstAttribute="centerY" secondItem="lFH-Hx-2tM" secondAttribute="centerY" id="nMX-rJ-dQZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="itemLabel" destination="uWT-JJ-YTO" id="RJ5-s8-1ah"/>
