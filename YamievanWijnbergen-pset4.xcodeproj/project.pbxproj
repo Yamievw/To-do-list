@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C6DBA421EBCA20F00D92C03 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6DBA351EBCA1D300D92C03 /* SQLite.framework */; };
 		6C6DBA441EBCB08600D92C03 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DBA431EBCB08600D92C03 /* ToDoCell.swift */; };
+		6C6DBA481EC1E39000D92C03 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DBA471EC1E39000D92C03 /* README.md */; };
+		6C6DBA4C1EC1E4FB00D92C03 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6DBA4B1EC1E4FB00D92C03 /* screenshot.png */; };
 		6CE855211EBC992800FA00B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE855201EBC992800FA00B8 /* AppDelegate.swift */; };
 		6CE855231EBC992800FA00B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE855221EBC992800FA00B8 /* ViewController.swift */; };
 		6CE855261EBC992800FA00B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE855241EBC992800FA00B8 /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 /* Begin PBXFileReference section */
 		6C6DBA2A1EBCA1D200D92C03 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "External/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		6C6DBA431EBCB08600D92C03 /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		6C6DBA471EC1E39000D92C03 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6C6DBA4B1EC1E4FB00D92C03 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		6CE8551D1EBC992800FA00B8 /* YamievanWijnbergen-pset4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YamievanWijnbergen-pset4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE855201EBC992800FA00B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE855221EBC992800FA00B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		6CE855141EBC992700FA00B8 = {
 			isa = PBXGroup;
 			children = (
+				6C6DBA471EC1E39000D92C03 /* README.md */,
+				6C6DBA4B1EC1E4FB00D92C03 /* screenshot.png */,
 				6CE8551F1EBC992800FA00B8 /* YamievanWijnbergen-pset4 */,
 				6CE8551E1EBC992800FA00B8 /* Products */,
 			);
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE8552B1EBC992800FA00B8 /* LaunchScreen.storyboard in Resources */,
+				6C6DBA4C1EC1E4FB00D92C03 /* screenshot.png in Resources */,
 				6CE855281EBC992800FA00B8 /* Assets.xcassets in Resources */,
 				6CE855261EBC992800FA00B8 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +277,7 @@
 			files = (
 				6CE855231EBC992800FA00B8 /* ViewController.swift in Sources */,
 				6C6DBA441EBCB08600D92C03 /* ToDoCell.swift in Sources */,
+				6C6DBA481EC1E39000D92C03 /* README.md in Sources */,
 				6CE855211EBC992800FA00B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
